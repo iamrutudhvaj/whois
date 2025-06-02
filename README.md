@@ -83,7 +83,7 @@ Follow these instructions to set up and run the project on your local machine.
 ### Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/iamrutudhvaj/whois.git
 cd whois
 ```
 
