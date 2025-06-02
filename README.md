@@ -13,38 +13,6 @@ This project provides a simple and efficient way to look up domain registration 
 - Responsive UI built with React and Tailwind CSS
 - RESTful API built with FastAPI
 
-## Using the Makefile
-
-This project includes a Makefile that simplifies common development tasks. You can use the following commands:
-
-```bash
-# Set up both backend and frontend environments
-make setup
-
-# Start both backend and frontend services with a single command
-make start
-
-# Start only the backend service
-make backend
-
-# Start only the frontend service
-make frontend
-
-# Stop all running services
-make stop
-
-# Clean up generated files and directories
-make clean
-
-# Run tests for both backend and frontend
-make test
-
-# Display all available commands
-make help
-```
-
-Using the Makefile is the recommended way to run the application as it handles both backend and frontend services with a single command.
-
 ## Project Structure
 
 ```
@@ -80,14 +48,61 @@ whois/
 
 Follow these instructions to set up and run the project on your local machine.
 
-### Clone the Repository
+### Using the Makefile (Recommended)
+
+This project includes a Makefile that simplifies common development tasks. This is the recommended way to run the application as it handles both backend and frontend services with a single command.
+
+```bash
+# Clone the repository
+git clone https://github.com/iamrutudhvaj/whois.git
+cd whois
+
+# Set up both backend and frontend environments
+make setup
+
+# Create .env file (required for the backend)
+cd backend
+echo "WHOIS_API_KEY=your_api_key_here" > .env
+cd ..
+
+# Start both backend and frontend services with a single command
+make start
+```
+
+Additional Makefile commands:
+
+```bash
+# Start only the backend service
+make backend
+
+# Start only the frontend service
+make frontend
+
+# Stop all running services
+make stop
+
+# Clean up generated files and directories
+make clean
+
+# Run tests for both backend and frontend
+make test
+
+# Display all available commands
+make help
+```
+
+### Manual Setup
+
+If you prefer to set up and run the services manually, follow these instructions:
+
+#### Clone the Repository
 
 ```bash
 git clone https://github.com/iamrutudhvaj/whois.git
 cd whois
 ```
 
-### Backend Setup
+#### Backend Setup
 
 1. Navigate to the backend directory:
 
@@ -133,7 +148,7 @@ python test_api.py
 
 This will send a test request to the backend API and display the response.
 
-### Frontend Setup
+#### Frontend Setup
 
 1. Navigate to the frontend directory:
 
